@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Splitter App</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(183, 100%, 15%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <img class="logo" src="images/logo.svg" />
+      <div class="app">
+        <div class="col">
+          <div class="amount-selector">
+            <h2>Bill</h2>
+            <img class="icon" src="images/icon-dollar.svg" />
+            <input
+              type="number"
+              name="amount"
+              id="amount"
+              placeholder="0"
+              autocomplete="off"
+            />
+          </div>
+          <h2>Select Tip %</h2>
+          <div class="tip-selector">
+            <div class="tip-btn">
+              <input type="radio" name="tip" id="tip-5" value="5" />
+              <label for="tip-5">5%</label>
+            </div>
+
+            <div class="tip-btn">
+              <input type="radio" name="tip" id="tip-10" value="10" />
+              <label for="tip-10">10%</label>
+            </div>
+
+            <div class="tip-btn">
+              <input type="radio" name="tip" id="tip-15" value="15" />
+              <label for="tip-15">15%</label>
+            </div>
+
+            <div class="tip-btn">
+              <input type="radio" name="tip" id="tip-25" value="25" />
+              <label for="tip-25">25%</label>
+            </div>
+
+            <div class="tip-btn">
+              <input type="radio" name="tip" id="tip-50" value="50" />
+              <label for="tip-50">50%</label>
+            </div>
+
+            <input
+              type="number"
+              name="tip-custom"
+              id="tip-custom"
+              placeholder="Custom"
+              autocomplete="off"
+              min="0"
+            />
+          </div>
+          <div class="people-selector">
+            <div class="heading-label">
+              <h2>Number of People</h2>
+              <h2 class="error-msg">Can't be Zero</h2>
+            </div>
+
+            <img class="icon" src="images/icon-person.svg" />
+            <input
+              type="number"
+              name="people"
+              id="people"
+              autocomplete="off"
+              placeholder="0"
+              min="0"
+            />
+          </div>
+        </div>
+
+     
+        <div class="col col-bg">
+          <div class="result">
+            <div class="half">
+              <div class="output">
+                <div class="result-name">
+                  <h3>Tip Amount</h3>
+                  <h4>/ person</h4>
+                </div>
+                <h1 class="tip-amount"></h1>
+              </div>
+              <div class="output">
+                <div class="result-name">
+                  <h3>Total</h3>
+                  <h4>/ person</h4>
+                </div>
+                <h1 class="total-amount"></h1>
+              </div>
+            </div>
+
+            <div class="half">
+              <button class="reset">RESET</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Coded by
+      <a href="https://github.com/anupamshekhar" target="_blank"
+        >Anupam Shekhar</a
+      >.
+    </div>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
